@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+    background-color: #000; /* 背景改为黑色 */
+    color: #fff; /* 文字颜色改为白色 */
+}
+
+#container {
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.text-btn {
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    background-color: #333; /* 默认按钮背景为深灰色 */
+    border: 1px solid #555; /* 边框颜色改为浅灰色 */
+    cursor: pointer;
+    position: relative;
+    color: #fff; /* 按钮文字颜色改为白色 */
+}
+
+#add-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    background-color: #4CAF50; /* 添加按钮背景改为绿色 */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#add-btn:hover {
+    background-color: #45a049; /* 鼠标悬停时按钮背景改为深绿色 */
+}
+
+#edit-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333; /* 模态框背景改为深灰色 */
+    padding: 20px;
+    border: 1px solid #555; /* 边框颜色改为浅灰色 */
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    color: #fff; /* 模态框文字颜色改为白色 */
+}
+
+#edit-modal input,
+#edit-modal select {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px;
+    background-color: #444; /* 输入框背景改为深灰色 */
+    border: 1px solid #555; /* 输入框边框颜色改为浅灰色 */
+    color: #fff; /* 输入框文字颜色改为白色 */
+}
+
+#edit-modal button {
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #4CAF50; /* 按钮背景改为绿色 */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#edit-modal button:hover {
+    background-color: #45a049; /* 鼠标悬停时按钮背景改为深绿色 */
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>按钮管理网页</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 引入CSS文件 -->
+</head>
+<body>
+    <button id="add-btn">添加按钮</button>
+    <div id="container"></div>
+    <div id="overlay"></div>
+    <div id="edit-modal">
+        <h3 id="modal-title">编辑按钮</h3>
+        <input type="text" id="edit-text" placeholder="请输入按钮文字（最多20字）" maxlength="20">
+        <input type="text" id="edit-url" placeholder="请输入网址（如 https://www.example.com）">
+        <label for="edit-color">选择背景颜色：</label>
+        <select id="edit-color">
+            <option value="#333">默认（深灰色）</option>
+            <option value="#ff0000">红色</option>
+        </select>
+        <button id="save-btn">保存</button>
+        <button id="delete-btn">删除</button>
+        <button id="cancel-btn">取消</button>
+    </div>
+
+    <script src="script.js"></script> <!-- 引入JavaScript文件 -->
+</body>
+</html>
