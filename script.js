@@ -20,10 +20,9 @@ let buttons = [
     { "id": "btn19", "text": "Azaar（重点）",           "url": "https://azaar.com/", "color": "#333" }
 ];
 
-const savedButtons = JSON.parse(localStorage.getItem('customButtons') || '[]');
-if (savedButtons.length > 0) {
-    buttons = savedButtons;
-}
+// 从 localStorage 中读取保存的按钮颜色
+const savedButtons = JSON.parse(localStorage.getItem('customButtons') || buttons;
+buttons = savedButtons;
 
 let displayedButtons = [];
 let nextId = buttons.length ? Math.max(...buttons.map(b => parseInt(b.id.replace('btn', '')))) + 1 : 1;
@@ -99,6 +98,7 @@ function saveButton() {
         const displayIndex = displayedButtons.findIndex(b => b.id === id);
         displayedButtons[displayIndex] = newButton;
     }
+    // 将按钮数据保存到 localStorage
     localStorage.setItem('customButtons', JSON.stringify(buttons));
     renderButtons();
     closeModal();
@@ -109,6 +109,7 @@ function deleteButton() {
     if (id) {
         buttons = buttons.filter(btn => btn.id !== id);
         displayedButtons = displayedButtons.filter(btn => btn.id !== id);
+        // 将按钮数据保存到 localStorage
         localStorage.setItem('customButtons', JSON.stringify(buttons));
         renderButtons();
     }
